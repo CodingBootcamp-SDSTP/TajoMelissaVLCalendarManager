@@ -1,6 +1,7 @@
 body {
 	margin: 0px;
 }
+/* Header Style */
 #header {
 	background: black; color: white;
 	font-size: 16px; padding: 16px;
@@ -34,5 +35,37 @@ body {
 .clear {
 	clear: both
 }
+/* Header Style */
 .content {
+	max-width: 400px;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -286px;
 }
+/* Login-Form Style */
+.login-form-container {
+    max-width: 400px;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -286px;
+}
+.login-form .input-container {
+	border-bottom: 1px solid #CCCCCC;
+	margin-top: 15px;
+	font-size: 20px;
+	color: #9e9e9e;
+	padding-bottom: 5px;
+}
+.login-form .input {
+	border: 0;
+	width: 200px;
+}
+
