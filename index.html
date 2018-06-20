@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html>
-	<head><title>sample</title>
+
+	<head>
+		<title>sample</title>
 		<meta name="viewport" content="initial-scale=1,maximum-scale=1"/>
 		<script src="script.js"></script>
-		<link rel="stylesheet" type="text/css" href="style.css"></link>
+		<link rel="stylesheet" type="text/css" href="mainstyle.css"></link>
 	</head>
+
 	<body>
+
 		<div id="header">
-			<div id="name">main page to</div>
+			<div id="name">VL CALENDAR MANAGER</div>
 			<div id="menubutton"><a id="menulink" href="#">MENU </a></div>
 			<div id="menu" class="hiddenmenu">
+				<div class="menuitem"><a href="#">User</a></div>
 				<div class="menuitem"><a href="#">Login</a></div>
-				<div class="menuitem"><a href="#">About Us</a></div>
 			</div>
 			<div class="clear"></div>
 		</div>
+
 		<div id="content">
-			<div class="login-form-container" id="login-form">
-				<div class="login-form-content">
-					<div class="login-form-header">
-						<div class="logo">
-							<!-- <img src=""/> -->
-						</div>
-						<h3>Login</h3>
-					</div>
-					<form method="post" action="" class="login-form">
-						<div class="input container">
-							<input type="username" class="input" name="username" placeholder="Username"/>
-						</div>
-						<div class="input-container">
-							<input type="password" id="login-password" class="input" name="password" placeholder="Password"/>
-							<i id="show-password" class="fa fa-eye"></i>
-						</div>
-						<div class="remeberme-container">
-							<input type="checkbox" name="rememberme" id="rememberme"/>
-							<label for="rememberme" class="rememberme"><span>Remember me</span></label>
-							<a class="forgot-password" href="#">Forgot Password?</a>
-						</div>
-						<input type="submit" name="login" value="Login"class="button"/>
-					</form>
-				</div>
+			<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+			<button class="tablink" onclick="openPage('News', this, 'green')">News</button>
+			<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+			<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+			<div id="Home" class="tabcontent">
+				<h3>Home</h3>
+				<p>Home is where the heart is...</p>
+				
+			</div>
+
+			<div id="News" class="tabcontent">
+				<h3>News</h3>
+				<p>newsnewsnews...</p>
+			</div>
+
+			<div id="Contact" class="tabcontent">
+				<h3>Contact</h3>
+				<p>contact contact contact contact</p>
+			</div>
+
+			<div id="About" class="tabcontent">
+				<h3>About</h3>
+				<p>contact contact contact contact</p>
 			</div>
 		</div>
+
 	</body>
+
 </html>

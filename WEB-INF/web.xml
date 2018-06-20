@@ -1,13 +1,13 @@
 <?xml version="1.0" ?>
 <web-app>
-	<display-name>Servlet Sample</display-name>
-	<description>VL Calendar App</description>
+	<display-name>VL Calendar Manager</display-name>
+	<description>VL Calendar Manager</description>
 	<servlet>
-		<servlet-name>VL Calendar App</servlet-name>
-		<servlet-class>VLCalendarServlet</servlet-class>
+		<servlet-name>VL Calendar Manager Users</servlet-name>
+		<servlet-class>UsersServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>VL Valendar App</servlet-name>
-		<url-pattern>/calendar</url-pattern>
+		<servlet-name>VL Calendar Manager Users</servlet-name>
+		<url-pattern>/users</url-pattern>
 	</servlet-mapping>
 </web-app>
