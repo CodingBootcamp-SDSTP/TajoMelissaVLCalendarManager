@@ -5,22 +5,11 @@ class VLCalendarManagerDatabase
 {
 	private UsersCollection users;
 
-	static Connection getDb() {
-		Connection conn = null;
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:8080/vlmanagerdb?user=admintajo&" + "password=tajopw&serverTimezone=UTC&useSSL=false");
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-		}
-		return(conn);
-	}
-
 	public VLCalendarManagerDatabase() {
 		users = new UsersCollection();
 		try {
-			Connection conn = getDb();
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:8080/vlmanagerdb?user=admin1&password=adminpw&serverTimezone=UTC&useSSL=false");
 			readFromDb(conn);
 		}
 		catch(Exception e) {
@@ -29,6 +18,7 @@ class VLCalendarManagerDatabase
 	}
 
 	public boolean readFromDb(Connection conn) {
+		System.out.println("Connected ....");
 		boolean read = false;
 		Statement stmt = null;
 		ResultSet rs = null;
@@ -53,10 +43,10 @@ class VLCalendarManagerDatabase
 			e.printStackTrace();
 		}
 		finally{
-			try{ if(stmt != null){stmt.close();}} catch(Exception e){}
-			try{ if(rs != null){rs.close();}} catch(Exception e){}
-			return(read);
+			try{ if(stmt != null) {stmt.close();}} catch(Exception e){}
+			try{ if(rs != null) {rs.close();}} catch(Exception e){}
 		}
+		return(true);
 	}
 
 	public void createObject(String... emp) {
